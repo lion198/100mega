@@ -1,0 +1,83 @@
+{block content}
+	<style>
+		table {
+			width: 50%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		th, td {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		th {
+			background-color: #f2f2f2;
+		}
+
+		a {
+			text-decoration: none;
+			color: #0066cc;
+			font-weight: bold;
+		}
+</style>
+	<h2>Article</h2>
+	<a n:href="AddArticle:default">New Article</a>
+	<table>
+		<thead>
+		<tr>
+			<th>Title</th>
+			<th>User Name</th>
+			<th>
+				Time
+				<button onclick="sortTable()">Seřadit</button>
+			</th>
+		</tr>
+		</thead>
+		<tbody id="articleList">
+
+		{foreach $articleList as $article}
+			<tr class="Article">
+				<td><a n:href="Article:show $article->id">{$article->title}</a></td>
+				<td>{$article->login}</td>
+				<td>{date('d. m. Y', $article->time)}</td>
+			</tr>
+		{/foreach}
+		</tbody>
+	</table>
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script>
+		var sortOrder = 'asc';
+		function sortTable() {
+			sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+
+			$.ajax({
+				type: 'GET',
+				url: '/home/sortData',
+				data: { sortOrder: sortOrder },
+				dataType: 'json',
+				success: function(response) {
+					// sort data
+					var tbody = $('#articleList');
+					tbody.empty();
+
+					response.articleList.forEach(function(article) {
+						var row = '<tr class="Article">';
+						row += '<td><a n:href="Article:show '+ article.id + '">' + article.title + '</a></td>';
+						row += '<td>' + article.login + '</td>';
+						row += '<td>' + new Date(article.time * 1000).toLocaleDateString() + '</td>';
+						row += '</tr>';
+						tbody.append(row);
+					});
+				},
+				error: function() {
+					alert('Chyba při načítání dat.');
+				}
+			});
+		}
+	</script>
+{/block}
+
+

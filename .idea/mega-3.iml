@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/latte/latte" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/application" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/caching" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/component-model" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/database" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/di" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/forms" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/http" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/mail" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/neon" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/php-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/robot-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/security" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/tester" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/symfony/thanks" />
+      <excludeFolder url="file://$MODULE_DIR$/nette-blog/vendor/tracy/tracy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="naja" level="application" />
+    <orderEntry type="library" name="jquery-3.6.4" level="application" />
+  </component>
+</module>
